@@ -34,6 +34,7 @@
 }
 .nav li:hover {
   background-color: #e49dfa;
+  border-radius: 8px;
 }
 .nav ul {
   width: 100vw;
@@ -51,7 +52,7 @@
 }
 .seccion {
   grid-area: seccion;
-  background-image: url("imagenes/fondo.jpg");
+  background-image: url("../img/fondo.jpg");
   font-size: 20px;
   padding: 20px 0px;
 }
@@ -93,7 +94,7 @@
    }
 .seccionFotos {
     grid-area: fotos;
-    background-image: url("imagenes/fondo.jpg");
+    background-image: url("../img/fondo.jpg");
     width: 100vw;
     display: flex;
     flex-direction: row;
@@ -125,7 +126,7 @@
     }
 .seccionMihistoria {
       grid-area:  miHistoria;
-      background-image: url("imagenes/fondo.jpg");
+      background-image: url("../img/fondo.jpg");
       width: 100vw;
       display: flex;
       flex-direction: row;
@@ -155,7 +156,7 @@
 }
 .seccionTienda {
   grid-area: tienda;
-  background-image: url("imagenes/fondo.jpg");
+  background-image: url("../img/fondo.jpg");
   width: 100vw;
   display: flex;
   flex-direction: row;
@@ -165,7 +166,7 @@
 }
 .card1{
   background-color: #e49dfa;
-  width: 90vw;
+  width: 80vw;
   text-align: center;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -204,7 +205,7 @@
 
 .containerContactame {
     display: grid;
-    grid-template-rows: 1fr 0.1fr 2fr 0.3fr;
+    grid-template-rows: 1fr 0.1fr 2.2fr 0.3fr;
     gap: 0px 0px;
     grid-template-areas:
       "header"
@@ -214,7 +215,7 @@
 }
 .seccionContactame {
     grid-area:  contactame;
-    background-image: url("imagenes/fondo.jpg");
+    background-image: url("../img/fondo.jpg ");
     width: 100vw;
     display: flex;
     flex-direction: row;
@@ -223,11 +224,22 @@
     flex-wrap: wrap;
 }
 .boxForm{
-    width:500px ;
+    text-align: center;
+    
+}
+.inputForm{
+    padding: 3px;
+    margin-bottom: 6px;
+    border-radius: 6px;
+}
+.boton_verde_agua{
+  background-color: aquamarine;
+  width: 80px;
+  height: 40px;
 }
    /* ********************Termina contactame************************* */
 
-/* @media screem inicio 320px */
+/*//// @media screem inicio 320px//// */
 
 @media screen and (min-width: 320px){
 .nav li { 
@@ -253,7 +265,7 @@
   grid-template-rows: 5fr 0.8fr 2fr 0.3fr;
 }  
 }
-/* @media screem container 768px */
+/*/// @media screem container 768px ///*/
 
 @media screen and (min-width: 768px){
 .nav li { 
@@ -312,8 +324,8 @@
     text-align: center;
 
     margin-bottom: 10px;
-  
   }
+ 
   .seccionTienda card img {
     width: 20vw;
     margin-bottom: 10px;
@@ -323,18 +335,25 @@
     font-size: 20px;
 
   }
+  .containerContactame {
+      display: grid;
+      grid-template-rows: 1fr 0.1fr 2.2fr 0.30fr;
+  }
+
+ /* //// @media screem container 1024px ///*/
 
 @media screen and (min-width: 1024px){
+
   .nav li { 
     list-style-type: none;
     font-size: 20px;
     font-family: "Lora", serif;
   }
    /* @merdia screem fotos */
-.containerFotos {
+  .containerFotos {
     grid-template-rows: 0.87fr 0.08fr 2.5fr 0.26fr;
   }
-.imagen1 {
+  .imagen1 {
     margin: 5px;
   }  
   /* @merdia screem Mi historia */
@@ -342,15 +361,59 @@
     grid-template-rows: 0.135fr 0.013fr 2.5fr 0.050fr;
   }
   .seccionMiHistoria {
-     
     flex-direction: column;
   }
   /* @merdia screem Tienda */
-.containerTienda {
+  .containerTienda {
   grid-template-rows: 0.92fr 0.08fr 2.5fr 0.25fr; 
+  }
+  /* @merdia screem Contactame */
+  .containerContactame {
+  grid-template-rows: 1fr 0.10fr 2fr 0.30fr; 
+  }
 }
-  /* @merdia screem Tienda */
+
+/* //// @media screem container 1440px ///*/
+
+@media screen and (min-width: 1440px){
+  /* @merdia screem fotos */
+
+  .containerFotos {
+    grid-template-rows: 1fr 0.10fr 2.66fr 0.28fr;
+  }
+  .imagen1 img:hover{
+    width: 500px;
+    height: auto;
+    transition: 0.5s;
+    transition-duration: 0.2;
+  }
+
+ /* @merdia screem Tienda*/
+
+  .containerTienda {
+    grid-template-rows: 0.55fr 0.08fr 2.5fr 0.15fr;
+  }
+
+ /* @merdia screem form */
+
+.boton_verde_agua{
+  background-color: aquamarine;
+  width: 80px;
+  height: 40px;
+}
+/* @merdia screem Contactame */
+
 .containerContactame {
-  grid-template-rows: 1fr 0.10fr 2.2fr 0.3fr; 
+  grid-template-rows: 1fr 0.10fr 2.5fr 0.30fr; 
+  }
+
+.boxForm{
+    text-align: center;
+    font-size: 25px;
+    font-family: "Lora", serif;
 }
+.inputForm{
+    padding: 3px;
+    margin-bottom: 10px;
+    border-radius: 8px; 
 }
