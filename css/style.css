@@ -164,38 +164,6 @@
   align-items: center;
   flex-wrap: wrap;
 }
-.card1{
-  background-color: #e49dfa;
-  width: 80vw;
-  text-align: center;
-  margin-top: 10px;
-  margin-bottom: 10px;
-
-}
-.card2{
-  background-color: #fcff2f;
-  width: 90vw;
-  text-align: center;
-  margin-top: 10px;
-  margin-bottom: 10px;
-
-}
-.card3{
-  background-color: #978cfa;
-  width: 90vw;
-  text-align: center;
-  margin-top: 10px;
-  margin-bottom: 10px;
-
-}
-.card4{
-  background-color: #fd208f;
-  width: 90vw;
-  text-align: center;
-   margin-top: 10px;
-  margin-bottom: 10px;
-
-}
 .seccionTienda card img {
   width: 80vw;
   margin-bottom: 10px;
@@ -416,4 +384,5 @@
     padding: 3px;
     margin-bottom: 10px;
     border-radius: 8px; 
+}
 }
