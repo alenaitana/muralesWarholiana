@@ -1,0 +1,22 @@
+#fondo-header{
+    background-color: aquamarine;
+}
+.img-logo1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+}
+.img-logo2{
+   text-align: center;
+    width: 200px;
+    margin-left: 20%;
+    margin: 0% auto;
+}
+#color-nav{
+    background-color: rgb(252, 194, 106);
+}
+.fondo-seccion{
+    width: 100%;
+    background-image: url("./img/fondo.jpg");
+}

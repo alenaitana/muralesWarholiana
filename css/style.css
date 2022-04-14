@@ -4,25 +4,39 @@
   box-sizing: border-box;
   overflow-x: hidden;
 }
-.container {
+.container_index {
   display: grid;
-  grid-template-rows: 1fr 0.1fr 2.5fr 0.3fr;
+  grid-template-rows: 1fr 2.0fr 0.5fr;
   gap: 0px 0px;
   grid-template-areas:
     "header"
-    "nav"
     "seccion"
     "footer";
 }
-.header {
+.header_index {
   grid-area: header;
   background-color: aquamarine;
   width: 100vw;
   display: flex;
   justify-content: center;
+  flex-direction: column;
   padding-top: 10px;
 }
-
+.logo{
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+.h1_index {
+  overflow-y: hidden;
+  font-family: 'Dancing Script', cursive;
+  color: #fd208f
+} 
+#tamaño-h1{
+  text-align: center;
+  font-size: 3rem;
+}
+/*
 .nav {
   grid-area: nav;
   display: flex;
@@ -49,70 +63,99 @@
 }
 .nav a {
   text-decoration: none;
+}*/
+#color-nav{
+  background-color: #978cfa;
 }
 .seccion {
   grid-area: seccion;
   background-image: url("../img/fondo.jpg");
   font-size: 20px;
   padding: 20px 0px;
-}
-.seccion p {
-  width: 90vw;
   display: flex;
   justify-content: center;
   text-align: center;
+}
+.seccion p {
+  width: 80vw;
   font-size: 20px;
-  margin-top: 25%;
+  margin-top: 100px;
   margin-right: 3 px;
   font-family: "Send Flowers";
-  margin-left: 5%;
+  margin: auto;
 }
 
-.footer {
+.footer_index {
     grid-area: footer;
     background-color: aquamarine;
     width: 100vw;
     display: flex;
+    flex-direction:column;
     justify-content: center;
     text-align: center;
-    padding-top: 25px;
+    padding-top: 10px;
   }
-  .footer img {
+
+  .footer_index img {
     width: 35px;
   }
+  
+
 
   /* ********************Termina index************************* */
 
 .containerFotos {
     display: grid;
-    grid-template-rows: 0.45fr 0.1fr 2.0fr 1,5fr;
+    grid-template-rows: 2fr 2.0fr 1,5fr;
     gap: 0px 0px;
     grid-template-areas:
       "header"
-      "nav"
       "fotos"
       "footer";
    }
 .seccionFotos {
     grid-area: fotos;
     background-image: url("../img/fondo.jpg");
-    width: 100vw;
+    width: 100vw; 
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
   }
+/*.transision_img img{
+  transition-duration: 1s;
+} 
+.transision_img:hover{
+  width: 400px;
+}*/
+
 .imagen1{
   border: thick solid black;
   margin-top: 20px;
-  
-  }
+  transition-property: width;
+  transition-duration: 2s;
+  transition-delay: 1s;
+  } 
+.imagen1 img:hover{
+  width: 600px ;
+}
+
 .imagen1 img{
   width: 300px;
   text-align: center;
   padding: 2px;
-}  
+} 
+
+.slide{
+  margin-top: 15px;
+}
+
+.slide img{
+height: 900px;
+}
+
+
     /* ********************Termina fotos************************* */
 
 .containerMihistoria {
@@ -135,6 +178,11 @@
       align-items: center;
       flex-wrap: wrap;
     }
+    .h1_index {
+      overflow-y: hidden;
+      font-family: 'Dancing Script', cursive;
+      color: #fd208f
+    } 
 .entrevista{
     text-align: center;
     font-size: 30px;
@@ -147,11 +195,10 @@
     /* ********************Termina miHistoria************************* */
 .containerTienda {
   display: grid;
-  grid-template-rows: 0.36fr 0.04fr 2.5fr 0.1fr;
+  grid-template-rows: 0.1fr 2.2fr 1fr ;
   gap: 0px 0px;
   grid-template-areas:
     "header"
-    "nav"
     "tienda"
     "footer";
 }
@@ -165,6 +212,9 @@
   align-items: center;
   flex-wrap: wrap;
 }
+.header_index div{
+  text-align: center;
+}
 .seccionTienda card img {
   width: 80vw;
   margin-bottom: 10px;
@@ -174,11 +224,10 @@
 
 .containerContactame {
     display: grid;
-    grid-template-rows: 1fr 0.1fr 2.2fr 0.3fr;
+    grid-template-rows: 1fr 2.2fr 0.3fr;
     gap: 0px 0px;
     grid-template-areas:
       "header"
-      "nav"
       "contactame"
       "footer";
 }
@@ -219,20 +268,22 @@
 
 /* @merdia screem Tienda */
 .containerTienda {
-  grid-template-rows: 0.41fr 0.04fr 2.5fr 0.1fr;
+  grid-template-rows: 0.481fr 2.5fr 0.20fr;
 }
 
 /* @merdia screem Fotos */
-
-.containerFotos {
-    grid-template-rows: 0.45fr 0.05fr 2.5fr 0.1fr;
-  }
+.slide img{
+    height: 400px;
+    }
 
   /* @merdia screem Mi historia */
 
 .containerMihistoria{
   grid-template-rows: 5fr 0.8fr 2fr 0.3fr;
 }  
+
+.containerContactame{
+  grid-template-rows: 1fr 2.2fr 0.4fr;
 }
 
 /*/// @media screem container 768px ///*/
@@ -249,19 +300,22 @@
     display: flex;
     justify-content: center;
     text-align: center;
-    font-size: 23px;
-    margin-top: 25%;
+    font-size: 1.7rem;
+    margin-top: 11%;
     margin-right: 3 px;
     font-family: "Send Flowers";
     margin-left: 5%;
   }
    /* @merdia screem fotos */
-.containerFotos {
-    grid-template-rows: 0.87fr 0.08fr 2.5fr 0.26fr;
-  }
+.seccionFotos{
+  
+  padding-left: 10px;
+}
+
 .imagen1 {
-    margin: 5px;
-  }  
+    margin-top: 10px;
+  } 
+
   /* @merdia screem Mi historia */
   .containerMihistoria{
     grid-template-rows: 5fr 0.5fr 2fr 0.3fr;
@@ -271,7 +325,7 @@
   }
   /* @merdia screem Tienda */
 .containerTienda {
-  grid-template-rows: 1fr 0.10fr 2.5fr 0.30fr; 
+  grid-template-rows: 1fr 2.5fr 0.35fr; 
   } 
   .card1{
     background-color: #e49dfa;
@@ -319,7 +373,7 @@
   }
   .containerContactame {
       display: grid;
-      grid-template-rows: 1fr 0.1fr 2.2fr 0.30fr;
+      grid-template-rows: 1fr 2.2fr 0.37fr;
   }
 
  /* //// @media screem container 1024px ///*/
@@ -331,44 +385,50 @@
     font-size: 20px;
     font-family: "Lora", serif;
   }
-   /* @merdia screem fotos */
-  .containerFotos {
-    grid-template-rows: 0.87fr 0.08fr 2.5fr 0.26fr;
+   /* @media screem fotos */
+  .containerFotos{
+    grid-template-rows: 2fr 2.5fr 1,5fr;
   }
+   
   .imagen1 {
     margin: 5px;
   }  
-  /* @merdia screem Mi historia */
+  /*@media*/
+  .seccion p {
+    font-size: 2rem;
+    margin-top: 11%;
+    margin-right: 20px;
+  }
+  /* @media screem Mi historia */
   .containerMihistoria{
     grid-template-rows: 0.135fr 0.013fr 2.5fr 0.050fr;
   }
   .seccionMiHistoria {
     flex-direction: column;
   }
-  /* @merdia screem Tienda */
+  /* @media screem Tienda */
   .containerTienda {
-  grid-template-rows: 0.93fr 0.08fr 2.5fr 0.25fr; 
+  grid-template-rows: 1fr 2.5fr 0.40fr; 
   }
-  /* @merdia screem Contactame */
+  /* @media screem Contactame */
   .containerContactame {
-  grid-template-rows: 1fr 0.10fr 2fr 0.30fr; 
+  grid-template-rows: 0.967fr 2fr 0.50fr; 
   }
 }
 
 /* //// @media screem container 1440px ///*/
 
 @media screen and (min-width: 1440px){
-  /* @merdia screem fotos */
+  /* @merdia screem index */
   .seccion p{
     width: 80vw;
-    margin-left: 10%;
-    font-size: 30px;
-    margin-top: 13%;
+    margin-left: 50px;
+    font-size: 2.3rem;
+    margin-top: 85px;
+  }
 
-  }
-  .containerFotos {
-    grid-template-rows: 1fr 0.10fr 2.66fr 0.28fr;
-  }
+   /* @merdia screem fotos */
+
   .imagen1 img:hover{
     width: 500px;
     height: auto;
@@ -379,7 +439,7 @@
  /* @merdia screem Tienda*/
 
   .containerTienda {
-    grid-template-rows: 0.55fr 0.08fr 2.5fr 0.15fr;
+    grid-template-rows: 0.848fr 2.5fr 0.30fr;
   }
 
  /* @merdia screem form */
@@ -392,7 +452,7 @@
 /* @merdia screem Contactame */
 
 .containerContactame {
-  grid-template-rows: 1fr 0.10fr 2.5fr 0.30fr; 
+  grid-template-rows: 0.995fr 2.5fr 0.50fr; 
   }
 
 .boxForm{
